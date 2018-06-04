@@ -1,0 +1,39 @@
+{
+  "name": "silent-promise",
+  "version": "0.0.1",
+  "description": "Make a promise fail silently. For use with async/await for easy error handling without try-catch",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "test": "jest --forceExit --coverage --verbose --detectOpenHandles",
+    "build": "npm run lint && tsc",
+    "lint": "tslint -c tslint.json -p tsconfig.json",
+    "tsc": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ThisIsRudigo/silent-promise.git"
+  },
+  "keywords": [
+    "async",
+    "async-await",
+    "promise",
+    "try-catch",
+    "error-handling"
+  ],
+  "author": "Rudigo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ThisIsRudigo/silent-promise/issues"
+  },
+  "homepage": "https://github.com/ThisIsRudigo/silent-promise#readme",
+  "devDependencies": {
+    "@types/jest": "^23.0.0",
+    "@types/node": "^10.3.0",
+    "jest": "^23.1.0",
+    "ts-jest": "^22.4.6",
+    "ts-node": "^6.0.5",
+    "tslint": "^5.10.0",
+    "typescript": "^2.9.1"
+  }
+}
