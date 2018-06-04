@@ -1,6 +1,6 @@
 {
   "name": "silent-promise",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Make a promise fail silently. For use with async/await for easy error handling without try-catch",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",

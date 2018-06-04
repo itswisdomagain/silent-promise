@@ -1,5 +1,6 @@
 export { promisify } from "util";
 export { SilentPromiseError } from "./silent-promise-error";
+export { default as PromiseError } from "./silent-promise-error";
 
 import PromiseError from "./promise-error";
 
@@ -51,7 +52,6 @@ export function silentCallback<A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, T>(fn: (
 // above functions into 1 - wraps fn into a function that returns SilentPromise (SilentPromiseFunction)
 export function silentCallback<T>(fn: RestArgumentFunction, bind?: any): SilentPromiseFunction<T> {
     const wrapFn = getSilentPromiseFunction(fn, getBindArgument(bind) || bind);
-    console.log(bind);
     Object.setPrototypeOf(wrapFn, Object.getPrototypeOf(fn));
     return Object.defineProperties(wrapFn, Object.getOwnPropertyDescriptors(fn));
 }
