@@ -1,9 +1,9 @@
 import IfError from "./if-error";
 
-class PromiseError {
+export default class PromiseError {
     private error: any;
 
-    constructor(error?: any) {
+    public constructor(error?: any) {
         this.error = error;
     }
 
@@ -15,5 +15,3 @@ class PromiseError {
         return new IfError(this.error, errorMessage);
     }
 }
-
-export = PromiseError;

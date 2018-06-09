@@ -1,6 +1,6 @@
 export { promisify } from "util";
 export { SilentPromiseError } from "./silent-promise-error";
-export { default as PromiseError } from "./silent-promise-error";
+export { default as PromiseError } from "./promise-error";
 
 import PromiseError from "./promise-error";
 
